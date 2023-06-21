@@ -8,51 +8,63 @@
     <title>Color picker</title>
   </head>
   <body>
-    <div class="wrapper">
       <header>
-        <h1>Pick some colors</h1>
+        <div class="wrapper">
+          <h1>Pick some colors</h1>
+
+        </div>
+
       </header>
       <main>
-        <form id="myform">
-          <div class="row">
-            <label for="bg">BG</label>
-            <input type="color" id="bg-in" value="#111111" />
-          </div>
-          <div class="row">
-            <label for="text">Text</label>
-            <input type="color" id="text-in" value="#ffffff" />
-          </div>
-          <div class="row">
-            <label for="square-1">Square 1</label>
-            <input type="color" id="square-1-in" value="#8a2be2" />
-          </div>
-          <div class="row">
-            <label for="square-2">Square 2</label>
-            <input type="color" id="square-2-in" value="#8a2be2" />
-          </div>
-          <div class="row">
-            <label for="square-3">Square 3</label>
-            <input type="color" id="square-3-in" value="#8a2be2" />
-          </div>
-        </form>
-        <button type="submit" class="btn" form="myform">Apply</button>
+            <div class="wrapper">
+              <form id="myform">
+                <div class="row">
+                  <label for="bg">BG</label>
+                  <input type="color" id="bg-in" value="#000000" />
+                </div>
+                <div class="row">
+                  <label for="text">Text</label>
+                  <input type="color" id="text-in" value="#ffffff" />
+                </div>
+                <div class="row">
+                  <label for="square-1">Square 1</label>
+                  <input type="color" id="square-1-in" value="#8a2be2" />
+                </div>
+                <div class="row">
+                  <label for="square-2">Square 2</label>
+                  <input type="color" id="square-2-in" value="#8a2be2" />
+                </div>
+                <div class="row">
+                  <label for="square-3">Square 3</label>
+                  <input type="color" id="square-3-in" value="#8a2be2" />
+                </div>
+              </form>
+              <button type="submit" class="btn" form="myform">Apply</button>
+      
+              <section>
+                <h2 class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+                  libero!
+                </h2>
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+                  quibusdam voluptas? Velit perspiciatis pariatur impedit.
+                </p>
+                <div class="shapes">
+                  <div class="shape" id="sq-1">1</div>
+                  <div class="shape" id="sq-2">2</div>
+                  <div class="shape" id="sq-3">3</div>
+                </div>
+              </section>
+            </div>
 
-        <section>
-          <h2 class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-            libero!
-          </h2>
-          <p class="text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
-            quibusdam voluptas? Velit perspiciatis pariatur impedit.
-          </p>
-          <div class="shapes">
-            <div class="shape" id="sq-1">1</div>
-            <div class="shape" id="sq-2">2</div>
-            <div class="shape" id="sq-3">3</div>
-          </div>
-        </section>
+ 
       </main>
+      <footer>
+        <div class="wrapper">
+          <small>Built by Diogo Stein</small>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

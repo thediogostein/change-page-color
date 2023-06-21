@@ -5,16 +5,27 @@
   /* margin: 0; */
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #000;
-  color: aliceblue;
-  padding-top: 1rem;
+  color: #fff;
 }
 
 .wrapper {
   width: 90%;
   max-width: 800px;
   margin-inline: auto;
+}
+
+header {
+  background-color: #000;
+  color: white;
+  padding: 1rem 0;
 }
 
 /* || FORM */
@@ -51,9 +62,6 @@ input[type='color'],
   }
 }
 
-.row {
-}
-
 label {
   display: block;
   margin-bottom: 0.25rem;
@@ -76,8 +84,7 @@ label {
   background-color: #8a2be2;
 }
 
-.square {
-}
-
-.bubble {
+footer {
+  margin-top: 4rem;
+  font-size: 1.1rem;
 }

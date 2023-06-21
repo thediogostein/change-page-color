@@ -1,5 +1,21 @@
 const form = document.querySelector('form');
 
+function updateDOM(colors) {
+  document.getElementById('bg-in').value = colors.bg;
+  document.getElementById('text-in').value = colors.text;
+  document.getElementById('square-1-in').value = colors.sq1;
+  document.getElementById('square-2-in').value = colors.sq2;
+  document.getElementById('square-3-in').value = colors.sq3;
+
+  document.body.style.backgroundColor = colors.bg;
+  document
+    .querySelectorAll('.text')
+    .forEach((item) => (item.style.color = colors.text));
+  document.getElementById('sq-1').style.backgroundColor = colors.sq1;
+  document.getElementById('sq-2').style.backgroundColor = colors.sq2;
+  document.getElementById('sq-3').style.backgroundColor = colors.sq3;
+}
+
 function updateColors(e) {
   e.preventDefault();
 
@@ -12,25 +28,17 @@ function updateColors(e) {
   };
 
   localStorage.setItem('colors', JSON.stringify(colors));
-
-  document.body.style.backgroundColor = colors.bg;
-  document
-    .querySelectorAll('.text')
-    .forEach((item) => (item.style.color = colors.text));
-  document.getElementById('sq-1').style.backgroundColor = colors.sq1;
-  document.getElementById('sq-2').style.backgroundColor = colors.sq2;
-  document.getElementById('sq-2').style.backgroundColor = colors.sq3;
+  updateDOM(colors);
 }
 
 function init() {
-  let colors = localStorage.getItem('colors');
-  console.log(JSON.parse(colors));
+  let colors = JSON.parse(localStorage.getItem('colors'));
+
+  if (colors) {
+    updateDOM(colors);
+  }
 
   form.addEventListener('submit', updateColors);
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
-// inicia a aplicação, verifica se há cores no localStorage
-// caso sim, usa essas cores para atualizar a página
-// caso não, usa valores 'default'
